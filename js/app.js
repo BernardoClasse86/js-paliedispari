@@ -31,7 +31,7 @@ function palindromeControl(word){
 
     for (let i = 0; i < typedWord / 2; i++) {
 
-        if (word[i] !== word[typedWord - i - 1]) {
+        if (word[i] !== word[(typedWord - 1) - i]) {
 
             message = 'its not palindrome'
 
@@ -90,10 +90,12 @@ else {
 
 function randomPcNumber(min, max) {
 
-    return Math.floor(Math.random() * (max - min + 1)) + 1;
+    const randomGenerator = Math.floor(Math.random() * (max - min + 1)) + 1
+
+    return randomGenerator
 }
 
-function numberSum(userNum, pcNum) {
+function numberSum(userNum, pcNum) { 
 
     const sum = userNum + pcNum
 
